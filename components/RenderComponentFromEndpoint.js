@@ -9,7 +9,7 @@ const Component = (props) => {
 
   useEffect(() => {
     const fetchComponent = async () => {
-      const { data } = await axios.post(`https://micro-server-blz.herokuapp.com//${props.name}`, { props })
+      const { data } = await axios.post(`https://micro-server-blz.herokuapp.com/${props.name}`, { props })
 
       setComponent(htmlToReactParser.parse(data))
     }
